@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+   <body style="background-color:powderblue;">
+   <font face='verdana'>
+
+
+      <h1>Signup</h1>
+
+      {% if error %}
+      <p><strong>Error:</strong> {{ error }}
+      {% endif %}
+
+      <form action = "{{ url_for('add') }}" method = post>
+         <dl>
+            <dt>Username:</dt>
+
+            <dd>
+               <input type = text name = username
+                  value = "{{request.form.username }}">
+            </dd>
+
+            <dt>Password1:</dt>
+            <dd><input type = password name = password1></dd>
+
+            <dt>Password2:</dt>
+            <dd><input type = password name = password2></dd>
+
+         </dl>
+
+         <p><input type = submit value = Signup></p>
+      </font>
+
+   </body>
+</html>
+
